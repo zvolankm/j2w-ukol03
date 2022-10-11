@@ -29,8 +29,10 @@ Počítej s tím, že *jméno* a *firma* budou vždy uvedené, stejně jako dva 
 1. Uprav šablonu `seznam.html` tak, aby zobrazovala vizitky z modelu. Každá vizitka musí odkazovat na svou stránku s detailem.
 1. Uprav metodu `detail()` tak, aby vracela `ModelAndView`. Uprav metodu tak, aby z požadavku prohlížeče načítala query parametr `id`. Zvol správné view a do
    modelu vlož vizitku získanou ze seznamu na základě `id` (indexu v seznamu).
-1. Uprav šablonu `detail.html` tak, aby zobrazovala vizitku z modelu. Pro zobrazení mapy použij připravený kód – jao paramnetr `q` je třeba předat celou adresu
-   z property `celaAdresa`.
+1. Uprav šablonu `detail.html` tak, aby zobrazovala vizitku z modelu.
+1. Pro zobrazení mapy použij připravený kód s tagem `iframe`, který vkládá vloženou mapu Mapy.cz. Jako parametr `q` se do URL předává adresa, která se má
+   na mapě zobrazit. Tuto adresu je potřeba zakódovat pomocí built-in funkce Freemarkeru `url`. Místo statického stringu s adresou Czechitas na Václavském
+   náměstí tedy předej property `celaAdresa` (pozor na to, že už nyní je statický string vložený v interpolaci `${…}`, tu už tedy do šablony nepřidáváš).
 1. Zkontroluj výsledek v prohlížeči.
 1. *Commitni* a *pushnni* změny (výsledný kód) do svého repository na GitHubu.
 1. Vlož odkaz na své repository do tabulky s úkoly na Google Drive.
